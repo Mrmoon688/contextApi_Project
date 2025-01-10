@@ -5,13 +5,13 @@ import { GrContact } from "react-icons/gr";
 import { HiBookOpen, HiHeart, HiNewspaper, HiUserGroup } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-const MainNavBarsection = () => {
+const MainNavBarsection = (props) => {
   return (
     <div className="mt-5">
-      <div className="container mx-auto ">
+      <div className="container ">
         <ul className="menu bg-base-300 lg:menu-horizontal rounded-box w-full shadow-md">
           <li>
-            <a>
+            <Link to={"/"}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -27,59 +27,60 @@ const MainNavBarsection = () => {
                 />
               </svg>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/teaching"}>
               <HiBookOpen size={23} className="text-cyan-500" />
               Teachings & Believes
               <span className="badge badge-xs badge-warning">NEW</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/news"}>
               <HiNewspaper size={23} className="text-pink-500" />
               News & Events
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/worship"}>
               <HiHeart size={23} className="text-green-500" />
               Worships & Practices
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/education"}>
               <FiBook size={23} className="text-red-400" />
               Educational Resources
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/community"}>
               <BsPeople size={23} className="text-[#7C00FE]" />
               Community
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/blogs"}>
               <HiNewspaper size={23} className="text-[#FFAF00]" />
               Blogs & Articles
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/about"}>
               <HiUserGroup size={23} className="text-[#F94C10]" />
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a>
+            <Link to={"/contact"}>
               <GrContact size={23} className="text-[#8BE8E5]" />
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
+      {props.children}
     </div>
   );
 };

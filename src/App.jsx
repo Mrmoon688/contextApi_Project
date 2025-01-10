@@ -1,11 +1,13 @@
 import React from "react";
 import MainNavBarsection from "./Components/MainNavBarsection";
+import { BrowserRouter } from "react-router-dom";
+import MainRouter from "../src/MainRouter";
 
 const App = () => {
   return (
-    <div>
-      <MainNavBarsection />
-    </div>
+    <BrowserRouter>
+    <MainRouter/>
+    </BrowserRouter>
   );
 };
 
